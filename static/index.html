@@ -163,7 +163,7 @@ function getPosition(e) {
 
 
 function addEntity(entity, data) {
-    var url = "../entity/" + entity;
+    var url = "/entity/" + entity;
     world[entity] = data;
     //XXX: Send a XHTML Request that updates the entity you just  modified!
     sendJSONXMLHTTPRequest(url, data, function(arg) {});
@@ -293,7 +293,7 @@ mouse.mousedraggers.push(function(x,y,clicked,e) {
 
 function update() {
     //XXX: TODO Get the world from the webservice using a XMLHTTPRequest
-    var url = "../world";
+    var url = "/world";
     sendJSONXMLHTTPRequest(url, '', function(data) {
         world = data; 
         drawNextFrame();
